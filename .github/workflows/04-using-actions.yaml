@@ -17,5 +17,6 @@ jobs:
           node-version: '20.x'
       - name: Install Dependencies        
         run: 
-          cd '04-using-actions/react-app'
+          cd 04-using-actions
+          cd react-app
           npm ci
