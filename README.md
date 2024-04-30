@@ -2,3 +2,5 @@
 Learn Github Actions
 
 Checking filters and activity types
+
+Checking Functions
