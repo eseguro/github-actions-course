@@ -26,6 +26,7 @@ jobs:
         uses: './.github/actions/composite-cache-deps'
         with:
           working-dir: ${{ env.working-directory }}
+          target-env: ${{ inputs.target-env }}
 
       - name: Test
         run: npm run test
