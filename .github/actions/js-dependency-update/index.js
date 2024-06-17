@@ -18,7 +18,7 @@ async function run() {
   const ghToken = core.getInput('gh-token');
 
   const commonExecOpts = {
-    cwd: workingDir,
+    cwd: workingDirectory,
   };
 
   core.setSecret(ghToken);
