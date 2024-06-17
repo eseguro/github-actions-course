@@ -17,14 +17,20 @@ async function run() {
 
   core.setSecret(ghToken);
 
-  if (!validateInput(baseBranch, branchRegex))
+  if (!validateInput(baseBranch, branchRegex)) {
     core.setFailed(`Invalid base-branch ${baseBranch}`);
+    return;
+  }
 
-  if (!validateInput(targetBranch, branchRegex))
+  if (!validateInput(targetBranch, branchRegex)) {
     core.setFailed(`Invalid target-branch ${targetBranch}`);
+    return;
+  }
 
-  if (!validateInput(workingDirectory, pathRegex))
+  if (!validateInput(workingDirectory, pathRegex)) {
     core.setFailed(`Invalid working-directory ${workingDirectory}`);
+    return;
+  }
 
   core.info(`base-branch ${baseBranch}`);
   core.info(`target-branch ${targetBranch}`);
