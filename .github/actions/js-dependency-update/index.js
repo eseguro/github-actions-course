@@ -5,10 +5,11 @@ function validateInput(input, regex) {
   // Use the provided regex for validation
   return regex.test(input);
 }
-const branchRegex = /^[a-zA-Z0-9_-\/\.]+$/;
-const pathRegex = /^[a-zA-Z0-9_-\/]+$/;
 
 async function run() {
+  const branchRegex = /^[a-zA-Z0-9_-\/\.]+$/;
+  const pathRegex = /^[a-zA-Z0-9_-\/]+$/;
+
   const baseBranch = core.getInput('base-branch', { required: false });
   const targetBranch = core.getInput('target-branch', { required: false });
   const workingDirectory = core.getInput('working-directory', { required: true });
