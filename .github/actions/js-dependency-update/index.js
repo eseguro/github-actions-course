@@ -38,14 +38,14 @@ async function run() {
   core.info(`working-directory ${workingDirectory}`);
 
   await exec.exec('npm update', [], {
-    cwd: workingDir,
+    cwd: workingDirectory,
   });
 
   const gitStatus = await exec.getExecOutput(
     'git status -s package*.json',
     [],
     {
-      cwd: workingDir,
+      cwd: workingDirectory,
     }
   );
 
