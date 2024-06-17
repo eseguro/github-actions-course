@@ -19,6 +19,10 @@ on:
         description: Whether the output debug messages to the console
         required: false
 
+permissions:
+  contents: write
+  pull-requests: write
+
 run-name: 17 - 2 - Custom Actions - JS | base branch ${{ inputs.base-branch }} | target branch ${{ inputs.target-branch }} | directory ${{ inputs.working-directory }}
 
 jobs:
