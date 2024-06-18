@@ -6,7 +6,7 @@ on:
       url:
         type: choice
         description: URL to ping
-        options: [https://www.google.com, htt://www.googletastic.com]
+        options: ['https://www.google.com', 'htt://www.googletastic.com']
       max_attempts:
         required: false
         description: Maximum number of attempts until action fails
