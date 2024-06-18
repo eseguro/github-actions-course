@@ -14,6 +14,10 @@ inputs:
     description: Delay in seconds between attempts
     default: '5'
 
+outputs:
+  url-reachable:
+    description: Whether the URL is reachable
+
 runs:
   using: docker
   image: Dockerfile
